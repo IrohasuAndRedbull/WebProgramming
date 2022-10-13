@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>演習0104</title>
+</head>
+<body>
+<h3>学習時間調査</h3>
+<form action="" method="POST">
+1.学籍番号 
+<input type="text" name="num">
+
+氏名
+<input type="text" name="name"><br><br>
+
+2.学年 
+<select name="schoolyear">
+    <option value="1年">1年</option>
+    <option value="2年">2年</option>
+    <option value="3年">3年</option>
+    <option value="4年">4年</option>
+    </select><br><br>
+
+3.一日の平均家庭学習時間
+<input type="radio" name="stdtime" value="lthalf">30分以内
+<input type="radio" name="stdtime" value="athour">1時間くらい
+<input type="radio" name="stdtime" value="attour">2時間くらい
+<input type="radio" name="stdtime" value="mttour">3時間以上<br><br>
+
+4.興味のあるコース(複数回答可能)
+<input type="checkbox" name="isc" value="1">情報システムコース
+<input type="checkbox" name="bec" value="1">ビジネスエキスパートコース
+<input type="checkbox" name="tfc" value="1">会計金融コース<br>
+<input type="checkbox" name="msc" value="1">経営科学コース<br><br>
+
+<input type="submit" value="送信">
+<input type="reset" value="消去">
+
+</form>
+
+</body>
+</html>
