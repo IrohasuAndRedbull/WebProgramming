@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>En0201</title>
+</head>
+<body>
+<?php
+$sideofa = 5;
+$sideofb = 8;
+$sideofc = 12;
+
+$sideofs = ($sideofa+$sideofb+$sideofc)/2;
+$herons_formula = sqrt($sideofs*($sideofs-$sideofa)*($sideofs-$sideofb)*($sideofs-$sideofc));
+
+printf("各辺の長さが、%.0f, %.0f, %.0f の三角形の面積は<br>", $sideofa,$sideofb,$sideofc);
+echo "ヘロンの公式より、".number_format($herons_formula,3)."です。";
+?>
+</body>
+</html>
