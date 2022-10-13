@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>En0210</title>
+</head>
+<body>
+<h3>演習0210</h3>
+
+<p>これは、あるダイビングショップのタンク利用料金は、5本まで1本当たり3000円、6本から10本まで1本当たり2700円<br>
+    11本以上は1本当たり2500円となる。また、自分で機材を持ち込んだ場合、タンク料金は2割引きで100円未満は四捨五入する。<br>
+    という料金の中で、利用したタンクの本数と機材を持ち込んだかどうかを入力または選択してください。<br><br>
+</p>
+
+<form action="En0210.php" method="POST">
+	利用したタンクの本数 <input type="text" name="usedtank" >(本)<br><br>
+
+    機材の持ち込み
+    <input type="radio" name="bm" value="1">持参
+	<input type="radio" name="bm" value="0">無し<br><br> <!--bring machine-->
+
+    <input type="submit" value="送信">
+	<input type="reset" value="消去">
+</form>
+
+</body>
+</html>

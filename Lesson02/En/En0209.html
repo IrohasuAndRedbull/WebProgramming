@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>En0209</title>
+</head>
+<body>
+<h3>演習0209</h3>
+
+<p>これは初乗り700円で、1.5kmまで、その先は296m毎に90円加算されるタクシーの料金を計算するプログラムです。<br>
+    また、夜間は通常料金に比べて3割高くなります。<br>乗車したい距離を入力し、昼間か夜間かを選択してください。
+</p>
+
+<form action="En0209.php" method="POST">
+	移動距離 <input type="text" name="purposedistance" >(km)<br><br>
+
+    <input type="radio" name="day" value="1">昼間
+	<input type="radio" name="day" value="0">夜間<br><br>
+
+    <input type="submit" value="送信">
+	<input type="reset" value="消去">
+</form>
+
+</body>
+</html>
