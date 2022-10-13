@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>演習0105</title>
+</head>
+<body>
+<h3>メタボリックシンドローム診断フォーラム</h3>
+
+メタボリックシンドロームとは、内臓脂肪型肥満をきっかけに脂質異常、高血糖、高血圧となる状態で
+す。運動不足・食べすぎなどの積み重ねが原因である場合が多く、生活習慣を改善する事により将来的に
+重篤な病気を予防することに繋がります。<br>
+
+<div>あなたの情報を入力してください。</div>
+
+<form action="" method="POST">
+1.性別<br>
+<input type="radio" name="sex" value="man">男性
+<input type="radio" name="sex" value="woman">女性<br><br>
+
+2.腹囲<br>
+<input type="text" name="hukui">cm<br><br>
+
+3.脂質異常<br>
+中性脂肪:<input type="text" name="neutralfat">mg/dL<!--Neutral_fat:中性脂肪-->
+    or    
+HDLコレステロール:<input type="text" name="hdlkoru">mg/dL<br><br><!--HDL_cholesterol-->
+
+4.高血圧<br>
+最高血圧:<input type="text" name="hobp">mm/Hg<!--High_Of_Blood_Pressure-->
+    or    
+最低血圧:<input type="text" name="lobp">mm/Hg<br><br><!--Low_Of_Blood_Pressure-->
+
+5.高血糖<br>
+空腹時血糖値:<input type="text" name="fbs">mg/dL<br><br><!--Fasting_Blood_Sugar-->
+<input type="submit" value="送信">
+<input type="reset" value="消去">
+
+</form>
+
+</body>
+</html>
