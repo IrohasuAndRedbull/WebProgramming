@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>En0201</title>
+<title>En0202</title>
 </head>
 <body>
 <?php
-$sideofa = 5;
+$sideofa = 5;/*各辺をそれぞれa,b,cと置き、abcの和/2とヘロンの公式より求める。*/
 $sideofb = 8;
 $sideofc = 12;
 
