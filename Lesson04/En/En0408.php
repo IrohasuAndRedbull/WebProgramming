@@ -9,7 +9,7 @@
 
 <?php
 $exam=array();
-$subjecrsum=array();/*各科目の合計点を配列に保存する*/
+$subjectsum=array();/*各科目の合計点を配列に保存する*/
 $average=array();/*各科目の平均点を配列に保存する*/
 $deviation=array();/*各教科の偏差を配列に保存する*/
 $powofdeviation=array();/*各教科の偏差の2乗を配列に保存する*/
@@ -37,9 +37,9 @@ for($i=0; $i<count($exam); $i++){
 $average[$i]=$subjectsum[$i]/count($exam[$i]);/*平均点の計算*/
     for($j=0; $j<count($exam[$i]); $j++){
         $deviation[$i][$j]=$exam[$i][$j]-$average[$i];/*偏差の計算*/
-        $powofdeviation[$i]+=pow($deviation[$i][$j], 2);/**偏差の2乗の総和の計算*/
+        $powofdeviation[$i]+=pow($deviation[$i][$j], 2);/*偏差の2乗の総和の計算*/
     }
-    $dispersion[$i]=$powofdeviation/count($exam[$i]);
+    $dispersion[$i]=$powofdeviation/count($exam[$i]);/*分散の計算*/
     $standarddeviation[$i]=sqrt($dispersion[$i]);/*標準偏差の計算*/
 }
 
