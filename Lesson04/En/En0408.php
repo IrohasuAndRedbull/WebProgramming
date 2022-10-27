@@ -28,7 +28,7 @@ while($rowdata=fgetcsv($fp)){
 }/*1行ずつ読み込む、1行分のデータが$rowdata*/
 fclose($fp);
 
-for($i=0 ;$i<count($exam); $i++){
+for($i=0; $i<count($exam); $i++){
 	for($j=1; $j<count($exam[$i]); $j++) $sumtemp+=$exam[$i][$j];
     $subjectsum[$i]=$sumtemp;
 }/*各教科の合計をsubjectsumという配列にいれる。*/
