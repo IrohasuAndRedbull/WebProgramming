@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>En0409.html</title>
+</head>
+<body>
+<h3>アンケート</h3>
+
+<p>氏名、性別、身長、体重をそれぞれ入力してください。<br><br>
+</p>
+
+<form action="En0409.php" method="POST">
+	氏名<input type="text" name="name" ><br>
+
+    性別<input type="radio" name="sex" value="1">男性
+	<input type="radio" name="sex" value="2">女性<br>
+
+    身長<input type="text" name="height" >cm<br>
+
+    体重<input type="text" name="weight" >kg<br>
+
+    <input type="submit" value="送信">
+	<input type="reset" value="消去">
+</form>
+
+</body>
+</html>
