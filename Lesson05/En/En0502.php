@@ -59,50 +59,50 @@ $suugaku = array(
 /*各科目の合計→平均→共分散、分散→標準偏差を求める*/
 /*National Language(国語)*/
 $NationalLanguage=array();		/*国語の配列*/
-$NLSum=0;						/*点数の総和*/
-$NLMulti=0;						/*点数の掛け算の総和*/
-$Pow_Of_NLSum=0;				/*点数の2乗の総和*/
-$Average_Of_NL=0;				/*平均*/
+$NLSum=0;				/*点数の総和*/
+$NLMulti=0;				/*点数の掛け算の総和*/
+$Pow_Of_NLSum=0;			/*点数の2乗の総和*/
+$Average_Of_NL=0;			/*平均*/
 $Pow_Of_Average_Of_NL=0;		/*平均の2乗*/
 $StandardDeviation_Of_NL=0;		/*標準偏差*/
 
 /*Mathematics(数学)*/
-$Math=array();					/*数学の配列*/
-$MathSum=0;						/*点数の総和*/
-$MathMulti=0;					/*点数の掛け算の総和*/
-$Pow_Of_MathSum=0;				/*点数の2乗の総和*/
-$Average_Of_Math=0;				/*平均*/
+$Math=array();				/*数学の配列*/
+$MathSum=0;				/*点数の総和*/
+$MathMulti=0;				/*点数の掛け算の総和*/
+$Pow_Of_MathSum=0;			/*点数の2乗の総和*/
+$Average_Of_Math=0;			/*平均*/
 $Pow_Of_Average_Of_Math=0;		/*平均の2乗*/
-$StandardDeviation_Of_Math=0;	/*標準偏差*/
+$StandardDeviation_Of_Math=0;		/*標準偏差*/
 
-$Covariance=0;					/*共分散*/
+$Covariance=0;				/*共分散*/
 $CorrelationCoefficient=0;		/*相関係数*/
 
 $count=0;
 
 /*国語の平均と標準偏差を求める*/
 foreach($kokugo as $val){
-	$NLSum+=$val;				/*点数の総和*/
+	$NLSum+=$val;			/*点数の総和*/
 	$Pow_Of_NLSum+=pow($val,2);	/*点数の2乗の総和*/
 	
 	$NationalLanguage[$count]=$val;
-	$count++;					/*国語の配列に値を代入する*/
+	$count++;			/*国語の配列に値を代入する*/
 }
 
-$Average_Of_NL=$NLSum/count($kokugo);													/*平均点*/
+$Average_Of_NL=$NLSum/count($kokugo);							/*平均点*/
 $StandardDeviation_Of_NL=sqrt($Pow_Of_NLSum/count($kokugo)-pow($Average_Of_NL,2) );	/*標準偏差*/
 
 $count=0;/*初期化*/
 /*数学の平均と標準偏差を求める*/
 foreach($suugaku as $val){
-	$MathSum+=$val;					/*点数の総和*/
+	$MathSum+=$val;			/*点数の総和*/
 	$Pow_Of_MathSum+=pow($val,2);	/*点数の2乗の総和*/
 
 	$Math[$count]=$val;
-	$count++;						/*数学の配列に値を代入する*/
+	$count++;			/*数学の配列に値を代入する*/
 }
 
-$Average_Of_Math=$MathSum/count($suugaku);													/*平均点*/
+$Average_Of_Math=$MathSum/count($suugaku);							/*平均点*/
 $StandardDeviation_Of_Math=sqrt($Pow_Of_MathSum/count($suugaku)-pow($Average_Of_Math,2) );	/*標準偏差*/
 
 /*共分散、相関係数を求める*/
@@ -113,7 +113,7 @@ for($i=0; $i<count($kokugo); $i++){
 
 	$Covariance+=$Deviation_Of_NL*$Deviation_Of_Math;
 }
-$Covariance/=count($kokugo);																/*共分散*/
+$Covariance/=count($kokugo);									/*共分散*/
 $CorrelationCoefficient=$Covariance/($StandardDeviation_Of_Math*$StandardDeviation_Of_NL);	/*相関係数*/
 
 
