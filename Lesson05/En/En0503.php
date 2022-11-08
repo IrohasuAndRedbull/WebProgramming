@@ -33,25 +33,25 @@ $siken = array(
 
 //各学科の総和を求め平均値を求める
 /*National Language(国語)*/
-$Sum_Of_NL=0;					/*点数の総和*/
-$Multi_Of_NL=0;					/*点数の掛け算の総和*/
+$Sum_Of_NL=0;				/*点数の総和*/
+$Multi_Of_NL=0;				/*点数の掛け算の総和*/
 $Pow_Of_Sum_Of_NL=0;			/*点数の2乗の総和*/
-$Average_Of_NL=0;				/*平均*/
+$Average_Of_NL=0;			/*平均*/
 $Pow_Of_Average_Of_NL=0;		/*平均の2乗*/
 $StandardDeviation_Of_NL=0;		/*標準偏差*/
 
 /*Mathematics(数学)*/
-$Sum_Of_Math=0;					/*点数の総和*/
-$Multi_Of_Math=0;				/*点数の掛け算の総和*/
+$Sum_Of_Math=0;				/*点数の総和*/
+$Multi_Of_Math=0;			/*点数の掛け算の総和*/
 $Pow_Of_Sum_Of_Math=0;			/*点数の2乗の総和*/
-$Average_Of_Math=0;				/*平均*/
+$Average_Of_Math=0;			/*平均*/
 $Pow_Of_Average_Of_Math=0;		/*平均の2乗*/
-$StandardDeviation_Of_Math=0;	/*標準偏差*/
+$StandardDeviation_Of_Math=0;		/*標準偏差*/
 
-$Covariance=0;					/*共分散*/
+$Covariance=0;				/*共分散*/
 $CorrelationCoefficient=0;		/*相関係数*/
 
-$Sum_Of_Both=0;					/*両方の科目の総和*/
+$Sum_Of_Both=0;				/*両方の科目の総和*/
 
 foreach($siken as $key => $rowdata){
 	$siken[$key]["goukei"]=$rowdata["kokugo"]+$rowdata["suugaku"];/*両方の科目の総和*/
@@ -66,16 +66,16 @@ foreach($siken as $key => $rowdata){
 }
 
 /*国語*/
-$Average_Of_NL=$Sum_Of_NL/count($siken);													/*平均点*/
+$Average_Of_NL=$Sum_Of_NL/count($siken);						/*平均点*/
 $StandardDeviation_Of_NL=sqrt($Pow_Of_Sum_Of_NL/count($siken)-pow($Average_Of_NL,2));	/*標準偏差*/
 
 /*数学*/
-$Average_Of_Math=$Sum_Of_Math/count($siken);													/*平均点*/
+$Average_Of_Math=$Sum_Of_Math/count($siken);							/*平均点*/
 $StandardDeviation_Of_Math=sqrt($Pow_Of_Sum_Of_Math/count($siken)-pow($Average_Of_Math,2));	/*標準偏差*/
 
 /*共分散、相関係数を求める*/
 foreach($siken as $key => $rowdata) $Covariance+=($rowdata["kokugo"]-$Average_Of_NL)*($rowdata["suugaku"]-$Average_Of_Math);
-$Covariance/=count($siken);																	/*共分散*/
+$Covariance/=count($siken);									/*共分散*/
 $CorrelationCoefficient=$Covariance/($StandardDeviation_Of_Math*$StandardDeviation_Of_NL);	/*相関係数*/
 
 echo"相関係数は $CorrelationCoefficient <br><br>";
